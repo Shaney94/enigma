@@ -32,8 +32,8 @@ body, html {
     position: absolute;
     top: 10px; /* Adjust as needed for your layout */
     right: 10px; /* Adjust as needed for your layout */
-    width: 120px; /* Set the width to 120px */
-    height: 60px; /* Set the height to 60px */
+    width: 60px; /* Set the width to 120px */
+    height: 30px; /* Set the height to 60px */
     z-index: 10; /* Ensures the logo is on top of other elements */
 }
 
