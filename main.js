@@ -1,7 +1,20 @@
-// This file would be named script.js and linked in your HTML.
+// Placeholder functions for navigation
+function navigateToAbout() {
+    // Implementation would go here
+    alert('Navigate to About');
+}
 
-// Example function for navigation (placeholder for actual functionality)
-function navigateTo(pageName) {
-    // This could be more complex in a real application.
-    console.log(`Navigating to ${pageName}`);
+function navigateToHowToPlay() {
+    // Implementation would go here
+    alert('Navigate to How to Play');
+}
+
+function navigateToLeaderboard() {
+    // Implementation would go here
+    alert('Navigate to Leaderboard');
+}
+
+function startGame() {
+    // Implementation would go here
+    alert('Start Game');
 }

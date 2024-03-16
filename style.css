@@ -1,43 +1,43 @@
-/* Reset and base styles */
+/* Reset CSS to ensure consistency across browsers */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-/* Header and carousel styles */
-header {
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
     position: relative;
-    max-width: 100%;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
 }
 
 .carousel-container {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 500px; /* Adjust based on your design */
+    width: 100%;
+    height: 70%; /* 70% of the viewport height */
 }
 
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Cover the container without losing aspect ratio */
 }
 
-/* Logo positioning */
 .logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 80px; /* Logo height */
-    width: auto; /* Maintain aspect ratio */
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 60px;
     z-index: 2;
 }
 
-/* Navigation button styles */
-.navigation {
+.sidebar {
     position: absolute;
     top: 50%;
     right: 0;
@@ -47,34 +47,24 @@ header {
     z-index: 2;
 }
 
-.nav-btn {
-    background-color: #7D3C98; /* Dark purple */
+.side-btn {
+    background-color: #4B0082; /* Purple color for the buttons */
     color: white;
-    border: none;
     padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.nav-btn:hover {
-    background-color: #5B2C6F; /* Lighter purple */
-}
-
-/* Play game button styles */
-.play-btn {
-    background-color: #C0392B; /* Red */
-    color: white;
+    margin-bottom: 10px; /* Spacing between buttons */
     border: none;
-    padding: 20px 40px;
-    font-size: 1.5em;
     cursor: pointer;
-    display: block;
-    width: 200px; /* Set a fixed width for the button */
-    margin: 20px auto; /* Center the button horizontally */
-    transition: background 0.3s ease;
 }
 
-.play-btn:hover {
-    background-color: #A93226; /* Darker red */
+.play-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 10%; /* 10% from the bottom of the viewport */
+    transform: translateX(-50%);
+    background-color: #800080; /* Another shade of purple for contrast */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
 }
