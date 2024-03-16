@@ -39,12 +39,14 @@ body, html {
 
 /* Styles for the navigation bar, positioned at the bottom of the viewport */
 .navigation {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Align vertically */
+    right: 0; /* Align to the right edge of the viewport */
+    transform: translateY(-50%); /* Center the buttons vertically relative to their height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: flex-end; /* Align the buttons to the right */
+    z-index: 5; /* Make sure the navigation is above the carousel image */
 }
 
 /* Styling for each navigation button */
