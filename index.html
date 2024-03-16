@@ -8,15 +8,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <img src="images/logo.png" alt="ENIGMA Logo" class="logo">
+    <div class="sidebar">
+        <button class="side-btn" onclick="alert('Navigate to About')">About</button>
+        <button class="side-btn" onclick="alert('Navigate to How to Play')">How to Play</button>
+        <button class="side-btn" onclick="alert('Navigate to Leaderboard')">Leaderboard</button>
+    </div>
     <div class="container">
         <div class="carousel-container">
             <img src="images/carousel.jpg" alt="Main Carousel" class="carousel-image">
-            <div class="sidebar">
-                <button class="side-btn" onclick="alert('Navigate to About')">About</button>
-                <button class="side-btn" onclick="alert('Navigate to How to Play')">How to Play</button>
-                <button class="side-btn" onclick="alert('Navigate to Leaderboard')">Leaderboard</button>
-            </div>
+            <img src="images/playgame.jpg" alt="ENIGMA Logo" class="logo">
         </div>
         <button class="play-btn" onclick="alert('Start Game')">Play Game</button>
     </div>

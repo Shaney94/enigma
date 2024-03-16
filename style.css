@@ -54,6 +54,7 @@ body, html {
     margin-bottom: 10px; /* Spacing between buttons */
     border: none;
     cursor: pointer;
+    float: right;
 }
 
 .play-btn {
@@ -62,9 +63,9 @@ body, html {
     bottom: 10%; /* 10% from the bottom of the viewport */
     transform: translateX(-50%);
     background-color: #800080; /* Another shade of purple for contrast */
-    color: white;
-    padding: 15px 30px;
+    color: rgb(242, 16, 185);
+    padding: 30px 60px;
     border: none;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 4em;
 }
