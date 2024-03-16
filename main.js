@@ -1,20 +1,19 @@
-// Placeholder functions for navigation
-function navigateToAbout() {
-    // Implementation would go here
-    alert('Navigate to About');
+function playGame() {
+    alert('Redirecting to the game...');
+    // Implement the actual game redirection logic here
 }
 
-function navigateToHowToPlay() {
-    // Implementation would go here
-    alert('Navigate to How to Play');
+function viewLeaderboard() {
+    alert('Redirecting to the leaderboard...');
+    // Implement leaderboard redirection logic here
 }
 
-function navigateToLeaderboard() {
-    // Implementation would go here
-    alert('Navigate to Leaderboard');
+function about() {
+    alert('Showing about information...');
+    // Implement about section logic here
 }
 
-function startGame() {
-    // Implementation would go here
-    alert('Start Game');
+function howToPlay() {
+    alert('Showing instructions on how to play...');
+    // Implement how to play instructions logic here
 }
