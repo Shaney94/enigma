@@ -1,0 +1,63 @@
+/* Global reset styles to ensure consistency across different browsers */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting width and height to 100% for html and body to ensure full viewport coverage */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Positioning context for the carousel container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling the main carousel image to take full width of its container */
+.carousel-image {
+    width: 100%;
+    height: auto; /* Keeps the image aspect ratio intact */
+}
+
+/* Styling the logo image with absolute positioning to place it on the top right corner of the carousel */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px; /* Logo size can be adjusted */
+    height: auto; /* Ensures the aspect ratio is maintained */
+}
+
+/* Styles for the navigation bar, positioned at the bottom of the viewport */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for each navigation button */
+.nav-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #660066; /* Sample color for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover state for navigation buttons for better user interaction feedback */
+.nav-btn:hover {
+    background-color: #550055; /* Darkens the button color when hovered over */
+}
