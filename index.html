@@ -22,15 +22,12 @@
         <!-- Top right corner logo; it's absolutely positioned in the CSS -->
     </div>
     <nav class="navigation">
-        <!-- Navigation container for page buttons -->
-        <button class="nav-btn" onclick="goToPage('about')">ABOUT</button>
-        <!-- Button for 'About' page. Uses an onclick event to trigger navigation -->
-        <button class="nav-btn" onclick="goToPage('how-to-play')">HOW TO PLAY</button>
-        <!-- Button for 'How to Play' page. Uses an onclick event to trigger navigation -->
-        <button class="nav-btn" onclick="goToPage('leaderboard')">LEADERBOARD</button>
-        <!-- Button for 'Leaderboard' page. Uses an onclick event to trigger navigation -->
-        <button class="nav-btn" onclick="goToPage('play-game')">PLAY GAME</button>
-        <!-- Button for 'Play Game' page. Uses an onclick event to trigger navigation -->
+        <div class="side-buttons">
+            <button class="nav-btn" onclick="goToPage('about')">ABOUT</button>
+            <button class="nav-btn" onclick="goToPage('how-to-play')">HOW TO PLAY</button>
+            <button class="nav-btn" onclick="goToPage('leaderboard')">LEADERBOARD</button>
+        </div>
+        <button class="nav-btn play-game" onclick="goToPage('play-game')">PLAY GAME</button>
     </nav>
 </body>
 </html>
