@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENIGMA - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <div class="container">
         <div class="carousel-container">
             <img src="images/carousel.jpg" alt="Main Carousel" class="carousel-image">
             <img src="images/logo.png" alt="ENIGMA Logo" class="logo">
-            <div class="navigation">
-                <button class="nav-btn" onclick="alert('Navigate to About')">ABOUT</button>
-                <button class="nav-btn" onclick="alert('Navigate to How to Play')">HOW TO PLAY</button>
-                <button class="nav-btn" onclick="alert('Navigate to Leaderboard')">LEADERBOARD</button>
+            <div class="sidebar">
+                <button class="side-btn" onclick="alert('Navigate to About')">About</button>
+                <button class="side-btn" onclick="alert('Navigate to How to Play')">How to Play</button>
+                <button class="side-btn" onclick="alert('Navigate to Leaderboard')">Leaderboard</button>
             </div>
         </div>
-        <button class="play-btn" onclick="alert('Navigate to Play Game')">PLAY GAME</button>
-    </header>
+        <button class="play-btn" onclick="alert('Start Game')">Play Game</button>
+    </div>
 </body>
 </html>
