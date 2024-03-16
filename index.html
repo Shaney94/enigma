@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<!-- The HTML5 doctype declaration, it's essential for telling the browser what type of document to expect -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Charset meta tag defines the character encoding for the HTML document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The viewport meta tag ensures the page is displayed correctly on all devices, particularly mobiles -->
     <title>ENIGMA - Home</title>
-    <!-- Title tag defines the title of the document -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Link tag to connect an external CSS file for styling the page -->
-    <script src="script.js" defer></script>
-    <!-- Script tag to connect an external JavaScript file. 'defer' ensures it runs after the HTML has parsed -->
 </head>
 <body>
-    <div class="carousel-container">
-        <!-- Container for the main carousel image and the logo. It uses relative positioning to allow the logo to be absolutely positioned within it -->
-        <img src="images/carousel.jpg" alt="Main Carousel" class="carousel-image">
-        <!-- Main carousel image -->
-        <img src="images/logo.png" alt="ENIGMA Logo" class="logo">
-        <!-- Top right corner logo; it's absolutely positioned in the CSS -->
-    </div>
-    <div class="side-nav">
-        <!-- New container for the About, How to Play, and Leaderboard buttons -->
-        <button class="nav-btn" onclick="goToPage('about')">ABOUT</button>
-        <!-- Button for 'About' page. Uses an onclick event to trigger navigation -->
-        <button class="nav-btn" onclick="goToPage('how-to-play')">HOW TO PLAY</button>
-        <!-- Button for 'How to Play' page. Uses an onclick event to trigger navigation -->
-        <button class="nav-btn" onclick="goToPage('leaderboard')">LEADERBOARD</button>
-        <!-- Button for 'Leaderboard' page. Uses an onclick event to trigger navigation -->
-    </div>
-    <button class="nav-btn play-game" onclick="goToPage('play-game')">PLAY GAME</button>
-    <!-- Separate Play Game button. Uses an onclick event to trigger navigation -->
+    <header>
+        <div class="carousel-container">
+            <img src="images/carousel.jpg" alt="Main Carousel" class="carousel-image">
+            <img src="images/logo.png" alt="ENIGMA Logo" class="logo">
+            <div class="navigation">
+                <button class="nav-btn" onclick="alert('Navigate to About')">ABOUT</button>
+                <button class="nav-btn" onclick="alert('Navigate to How to Play')">HOW TO PLAY</button>
+                <button class="nav-btn" onclick="alert('Navigate to Leaderboard')">LEADERBOARD</button>
+            </div>
+        </div>
+        <button class="play-btn" onclick="alert('Navigate to Play Game')">PLAY GAME</button>
+    </header>
 </body>
 </html>
