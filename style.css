@@ -30,10 +30,10 @@ body, html {
 /* Styling the logo image with absolute positioning to place it on the top right corner of the carousel */
 .logo {
     position: absolute;
-    top: 10px; /* Adjust as needed for your layout */
-    right: 10px; /* Adjust as needed for your layout */
-    width: 60px; /* Set the width to 120px */
-    height: 30px; /* Set the height to 60px */
+    top: 0; /* Align to the top edge of the carousel container */
+    right: 0; /* Align to the right edge of the carousel container */
+    width: 120px; /* Set the width as desired */
+    height: 60px; /* Set the height as desired, keeping the aspect ratio in mind */
     z-index: 10; /* Ensures the logo is on top of other elements */
 }
 
