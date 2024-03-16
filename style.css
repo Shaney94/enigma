@@ -30,10 +30,10 @@ body, html {
 /* Styling the logo image with absolute positioning to place it on the top right corner of the carousel */
 .logo {
     position: absolute;
-    top: 0; /* Align to the top edge of the carousel container */
-    left: 0; /* Align to the left edge of the carousel container */
-    width: 120px; /* Set the width as desired */
-    height: 60px; /* Set the height as desired, keeping the aspect ratio in mind */
+    top: 10px; /* Adjust as needed for your layout */
+    left: 10px; /* Adjust as needed for your layout */
+    width: 120px; /* Width of the logo */
+    height: 60px; /* Height of the logo */
     z-index: 10; /* Ensures the logo is on top of other elements */
 }
 
@@ -49,18 +49,29 @@ body, html {
     z-index: 5; /* Make sure the navigation is above the carousel image */
 }
 
+.side-nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 5; /* Ensures the navigation is above the carousel image */
+}
 /* Styling for each navigation button */
 .nav-btn {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background: #660066; /* Sample color for buttons */
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    /* ... existing button styles ... */
+    margin-bottom: 10px; /* Space between buttons */
 }
 
 /* Hover state for navigation buttons for better user interaction feedback */
 .nav-btn:hover {
     background-color: #550055; /* Darkens the button color when hovered over */
+}
+
+/* Style for the Play Game button to keep it where it is */
+.play-game {
+    /* ... existing styles ... */
+    position: absolute; /* If needed to position it separately */
+    /* ... other positioning styles if needed ... */
 }
