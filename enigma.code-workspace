@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "images"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {}
