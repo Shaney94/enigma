@@ -1,77 +1,80 @@
-/* Global reset styles to ensure consistency across different browsers */
-*,
-*:before,
-*:after {
+/* Reset and base styles */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Setting width and height to 100% for html and body to ensure full viewport coverage */
-body, html {
-    width: 100%;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
+/* Header and carousel styles */
+header {
+    position: relative;
+    max-width: 100%;
 }
 
-/* Positioning context for the carousel container */
 .carousel-container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px; /* Adjust based on your design */
 }
 
-/* Styling the main carousel image to take full width of its container */
 .carousel-image {
     width: 100%;
-    height: auto; /* Keeps the image aspect ratio intact */
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Styling the logo image with absolute positioning to place it on the top right corner of the carousel */
+/* Logo positioning */
 .logo {
     position: absolute;
-    top: 10px; /* Adjust as needed for your layout */
-    left: 10px; /* Adjust as needed for your layout */
-    width: 120px; /* Width of the logo */
-    height: 60px; /* Height of the logo */
-    z-index: 10; /* Ensures the logo is on top of other elements */
+    top: 10px;
+    left: 10px;
+    height: 80px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+    z-index: 2;
 }
 
-/* Styles for the navigation bar, positioned at the bottom of the viewport */
+/* Navigation button styles */
 .navigation {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Align vertically */
-    right: 0; /* Align to the right edge of the viewport */
-    transform: translateY(-50%); /* Center the buttons vertically relative to their height */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack the buttons vertically */
-    align-items: flex-end; /* Align the buttons to the right */
-    z-index: 5; /* Make sure the navigation is above the carousel image */
-}
-
-.side-nav {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    z-index: 5; /* Ensures the navigation is above the carousel image */
+    z-index: 2;
 }
-/* Styling for each navigation button */
+
 .nav-btn {
-    /* ... existing button styles ... */
-    margin-bottom: 10px; /* Space between buttons */
+    background-color: #7D3C98; /* Dark purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Hover state for navigation buttons for better user interaction feedback */
 .nav-btn:hover {
-    background-color: #550055; /* Darkens the button color when hovered over */
+    background-color: #5B2C6F; /* Lighter purple */
 }
 
-/* Style for the Play Game button to keep it where it is */
-.play-game {
-    /* ... existing styles ... */
-    position: absolute; /* If needed to position it separately */
-    /* ... other positioning styles if needed ... */
+/* Play game button styles */
+.play-btn {
+    background-color: #C0392B; /* Red */
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: block;
+    width: 200px; /* Set a fixed width for the button */
+    margin: 20px auto; /* Center the button horizontally */
+    transition: background 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #A93226; /* Darker red */
 }
