@@ -62,7 +62,7 @@
     width: 10%;
     align-content: center;
     position: absolute;
-    left: 27%;
+    left: 25%;
     top: 25%;
 }
 
@@ -73,7 +73,7 @@
     /* Center the contents of the button */
     align-items: center;
     /* Whitespacing between the text inside the button and button outline. */
-    padding: 300px 0px;
+    padding: 200px 0px;
     /* Set border thickness and colour*/
     border: 1px solid white;
     /* Disable button outline */
@@ -113,7 +113,7 @@
     /* Center the contents of the button */
     align-items: center;
     /* Whitespacing between the text inside the button and button outline. */
-    padding: 300px 0px;
+    padding: 250px 0px;
     /* Set border thickness and colour*/
     border: 1px solid white;
     /* Disable button outline */
@@ -125,7 +125,7 @@
     font-size: 36px;
     cursor: pointer;
     width: 25%;
-    height: 33%;
+    height: 0%;
 }
 
 .howto-button:hover {
@@ -142,8 +142,8 @@
     width: 22%;
     align-content: center;
     position: absolute;
-    right: 38%;
-    bottom: 51%;
+    right: 40%;
+    bottom: 70%;
 }
 
 .leaderboard-button {
@@ -151,7 +151,7 @@
     right:0%;
     top: 66%;
     /* Whitespacing between the text inside the button and button outline. */
-    padding: 300px 0px;
+    padding: 250px 0px;
     /* Set border thickness and colour*/
     border: 1px solid white;
     /* Disable button outline */
@@ -183,5 +183,14 @@
     margin: auto;
     position: absolute;
     right: 33%;
-    bottom: 52%;
+    bottom: 60%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
 }
