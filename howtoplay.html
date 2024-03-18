@@ -16,24 +16,70 @@
 <body>
     <!-- Create a container element (section) -->
     <div class="container">
-        <a href="index.html"><img src="./images/logo.png" class="logo"></a><br>
-        <div class="howtoplay-rectangle">HOW TO PLAY</div><br><br>
-        <div class="w3-container">
-            <h2>Slideshow Indicators</h2>
-            <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+      <a href="index.html"><img src="./images/logo.png" class="logo"></a><br>
+      <div class="howto-rectangle">HOW TO PLAY</div><br><br>
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="./images/slidepic1.png" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[1]</b> Solve the enigma code by discovering what letter below corresponds to the real letter.</p>
           </div>
-          
-          <div class="w3-content w3-display-container" style="max-width:800px">
-            <img class="mySlides" src="images/step1.jpg" style="width:100%">
-            <img class="mySlides" src="images/step2.jpg" style="width:100%">
-            <img class="mySlides" src="images/step3.jpg" style="width:100%">
-            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-            </div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="./images/step2.jpg" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[2]</b> A tick means you guessed correctly and will replace all corresponding letters to the correct letter.</p>
           </div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="./images/step3.jpg" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[3]</b> A cross means you have guessed the incorrect letter for the corresponding letter and to try again.</p>
+          </div>
+        </div>
+  
+        <div class="mySlides fade">
+          <img src="./images/step1.jpg" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[4]</b> You can use your mouse or keyboard to input and guess the correct letters.</p>
+          </div>
+        </div>
+  
+        <div class="mySlides fade">
+          <img src="./images/step2.jpg" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[5]</b> There are 3 levels. 3 messages need to be completed. Each correct level adds 5 extra seconds onto the timer.</p>
+          </div>
+        </div>
+  
+        <div class="mySlides fade">
+          <img src="./images/step3.jpg" style="width:100%">
+          <!-- Text -->
+          <div class="instruction-text">
+            <p><b>[6]</b> You have 3 minutes to save Britain from nuclear warfare. Goodluck!</p>
+          </div>
+        </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094; PREVIOUS</a>
+        <a class="next" onclick="plusSlides(1)">NEXT &#10095;</a>
+      </div>
+    </div>
 </body>
 </html>
