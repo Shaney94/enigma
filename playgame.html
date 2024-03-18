@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <a href="index.html"><img src="./images/logo.png" class="logo"></a>
-<title>About</title>
-<link rel="stylesheet" href="playgame.css"
-<style>
-    body {
-      color: grey;
-    }
-    
-    h1 {
-      color: rgb(10, 23, 136);
-    }
-    </style> 
-</head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add page title -->
+    <title>ENIGMA - PLAY GAME</title>
+    <!-- Link CSS  -->
+    <link href="playgame.css" rel="stylesheet">
+    <!-- Link JavaScript  -->
+    <script defer src="playgame.js"></script>
+    <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
 <body>
-<center>
-    <h1>About<br>Enigma</h1> 
-    <p>The World Factbook provides basic intelligence on the history, people, government, economy, energy, geography, environment, communications, transportation, military, terrorism, and transnational issues for 266 world entities.</p>
+<div class="container">
+  <div class="hangman-box">
+    <img src="images/hangman-0.svg" alt="hangman-img">
+    <h1>Enigma Game</h1>
+  </div>
+  <div class="game-box">
+    <u1 class="word-display">
+        <li class="letter"></li>
+        <li class="letter"></li>
+        <li class="letter guessed">a</li>
+        <li class="letter"></li>
+        <li class="letter"></li>
+        <li class="letter"></li>
+        <li class="letter"></li>
+        <li class="letter"></li>
+    </u1>
+    <h4 class="hint-text">
+    Hint:
+    <b>Lorem ipsum pejhs eeheh eheh</b>
+    </h4>
+    <h4 class="guesses-text">
+    Incorrect guesses:
+    <b>0 / 6</b>
+  </h4>
+  <div class="keyboard">
+    <button>a</button><button>b</button><button>c</button><button>d</button><button>e</button><button>f</button><button>g</button><button>h</button><button>i</button><button>j</button><button>k</button><button>l</button><button>m</button><button>n</button><button>o</button><button>p</button><button>q</button><button>r</button><button>s</button><button>t</button><button>u</button><button>v</button><button>w</button><button>x</button><button>y</button><button>z</button>                       
+  </div>
+  </div>
+</div>
 
-      <h2>Travel the globe with CIA’s World Factbook.</h2><br>
-      <h3>View worldwide country statistics</h3>
-      <a href="index.html"><img src="images/machine.jpg">
 
-        <button class="accordion">Section 1</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
-        
-        <button class="accordion">Section 2</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
-        
-        <button class="accordion">Section 3</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
-
-      <h2>Fact of The Day</h2><br><br>
-      <h3>Salisbury Cathedral</h3><br>
-      <img src="images/salis.jpg"></a>
-      <p>The United Kingdom’s Salisbury Cathedral, consecrated in 1258, is an Anglican cathedral built in the Early English Gothic style. The Cathedral Church of the Blessed Virgin Mary, as it is also known, includes a heavily buttressed church spire – the tallest in the UK - that contains no bell. The cathedral is home to the oldest working clock in the world (built in 1386 or possibly earlier) and one of the original surviving copies of the Magna Carta.</p><br>
-      <a href="https://www.cia.gov/the-world-factbook/daily-facts-archive/">VIEW 30-DAY ARCHIVE</a>
-    </center>
 </body>
- </html>
+</html>
