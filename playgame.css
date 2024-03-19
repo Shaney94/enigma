@@ -15,7 +15,8 @@ body {
     background: rgb(20, 4, 58);
 }
 .container {
-    width: 850px;
+    width: 1500px;
+    height: 550px;
     background: rgb(148, 83, 209);
     display: flex;
     gap: 70px;
@@ -65,7 +66,7 @@ body {
     font-weight: 600;
 }
 .game-box .guesses-text b {
-    color: rgb(255, 255, 255);
+    color: rgb(249, 0, 0);
 }
 .game-box .keyboard {
     display:  flex;
@@ -103,7 +104,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: #ad6464;
 }
 .game-modal .content {
     background: #fff;
