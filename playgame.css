@@ -31,6 +31,7 @@ body {
 }
 
 .container {
+    margin-top: 200px;
     display: flex;
     width: 850px;
     gap: 70px;
