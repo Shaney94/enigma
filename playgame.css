@@ -12,7 +12,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #14043a;
+    width: 100%;
+    min-height: 100vh;
+    /* Set background image with overlaying colour gradient (includes opacity) */
+    background-image: linear-gradient(rgb(117 190 218 /40%),rgb(9,0,77,80%)), url(./images/machine.jpg);
+    /*Set size of the background image */
+    background-size: cover;
+    /*Set position of resize background image */
+    background-position: center;
 }
 
 .container {
