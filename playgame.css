@@ -90,6 +90,7 @@ body {
 .keyboard button {
     padding: 7px;
     width: calc(100% / 9 - 5px);
+    border-radius: 500px;
 }
 .keyboard button[disabled] {
     pointer-events: none;
