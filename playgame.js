@@ -30,7 +30,7 @@ const gameOver = (isVictory) => {
     const howToPlayButton = document.querySelector(".how-to-play"); // Select the "How to Play" button
 
     gameModal.querySelector("img").src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
-    gameModal.querySelector("h4").innerText = isVictory ? 'You Saved Great Britain!' : 'Game Over!';
+    gameModal.querySelector("h4").innerText = isVictory ? 'You Saved Great Britain!' : 'The War is Lost!';
     gameModal.querySelector("p").innerHTML = isVictory ? `<b>${currentWord}</b>` : `${modalText} <b>${currentWord}</b>`;
 
     // Hide the "How to Play" button when the player wins
