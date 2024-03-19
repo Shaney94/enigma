@@ -26,11 +26,18 @@ const getRandomWord = () => {
 }
 const gameOver = (isVictory) => {
     // After game complete.. showing modal with relevant details
-    const modalText = isVictory ? `You found the word:` : 'The correct word was:';
+    const modalText = isVictory ? `You Saved Great Britain!` : 'The correct word was:';
+    const howToPlayButton = document.querySelector(".how-to-play"); // Select the "How to Play" button
+
     gameModal.querySelector("img").src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
-    gameModal.querySelector("h4").innerText = isVictory ? 'Congrats!' : 'Game Over!';
-    gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
+    gameModal.querySelector("h4").innerText = isVictory ? 'You Saved Great Britain!' : 'Game Over!';
+    gameModal.querySelector("p").innerHTML = isVictory ? `<b>${currentWord}</b>` : `${modalText} <b>${currentWord}</b>`;
+
+    // Hide the "How to Play" button when the player wins
+    howToPlayButton.style.display = isVictory ? 'none' : 'block';
+    
     gameModal.classList.add("show");
+    
 }
 const initGame = (button, clickedLetter) => {
     // Checking if clickedLetter is exist on the currentWord
@@ -91,3 +98,4 @@ viewLeaderboardsBtn.addEventListener("click", showLeaderboards);
 
 // Call `resetGame` at the end of the script to make sure the button is created when the page loads
 resetGame();
+
