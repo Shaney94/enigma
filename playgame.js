@@ -63,3 +63,31 @@ for (let i = 97; i <= 122; i++) {
 }
 getRandomWord();
 playAgainBtn.addEventListener("click", getRandomWord);
+
+// Leaderboard Button Creation and Event
+const createLeaderboardButton = () => {
+    const contentDiv = gameModal.querySelector(".content");
+    let leaderboardButton = contentDiv.querySelector(".view-leaderboards");
+    if (!leaderboardButton) {
+        leaderboardButton = document.createElement("button");
+        leaderboardButton.textContent = "View Leaderboards";
+        leaderboardButton.classList.add("modal-button", "view-leaderboards");
+        contentDiv.appendChild(leaderboardButton);
+    }
+    return leaderboardButton;
+};
+
+const showLeaderboards = () => {
+    // Logic to display the leaderboards goes here
+    console.log('Leaderboard view requested');
+    // You'll replace the console.log with your actual code to show leaderboards
+};
+
+// Add this line inside the resetGame function, right before `gameModal.classList.remove("show");`
+const viewLeaderboardsBtn = createLeaderboardButton();
+
+// And this line right after creating the button inside the resetGame function
+viewLeaderboardsBtn.addEventListener("click", showLeaderboards);
+
+// Call `resetGame` at the end of the script to make sure the button is created when the page loads
+resetGame();
