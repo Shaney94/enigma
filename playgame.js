@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             time--;
         }
+                // Change the countdown timer's color to red when 10 seconds or less remain
+                if (time <= 10) {
+                    countdownEl.style.color = 'red';
+                } else {
+                    // Reset to the default color if more than 10 seconds remain
+                    countdownEl.style.color = ''; // Use your default font color or leave it as '' if it's already defined in your CSS
+                }
     }
 
     const resetGame = () => {
