@@ -347,15 +347,39 @@ p {
 
 /* Positioning the countdown timer at the bottom right corner */
 .countdown {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    z-index: 1000;
-}
+    position: fixed; /* Fixed position relative to the viewport */
+    right: 50px; /* Distance from the right edge of the viewport */
+    top: 50%; /* Centered vertically */
+    transform: translateY(-50%); /* Offset for exact vertical centering */
+    background: #000066; /* Background color */
+    border: 1px solid #000066; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside the box */
+    width: 120px; /* Width of the box */
+    z-index: 100; /* Make sure it's on top of other elements */
+  }
+  
+  .timer-icon {
+    width: 60px; /* Width of the clock icon */
+    height: auto; /* Auto height to maintain aspect ratio */
+    display: block; /* Block display to enforce new line */
+    margin: 0 auto 10px; /* Center the icon horizontally */
+  }
+  
+  .time-left {
+    display: block; /* New line */
+    color: white; /* Text color */
+    margin-bottom: 5px; /* Space between "TIME LEFT" and the timer */
+    font-size: 14px; /* Font size */
+  }
+  
+  .timer {
+    color: white; /* Text color */
+    font-size: 22px; /* Larger font size for the timer */
+    font-weight: bold; /* Bold font weight */
+    letter-spacing: 1px; /* Space out the letters a bit */
+  }
+  
 
