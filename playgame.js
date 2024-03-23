@@ -1,125 +1,92 @@
-const wordDisplay = document.querySelector(".word-display");
-const guessesText = document.querySelector(".guesses-text b");
-const keyboardDiv = document.querySelector(".keyboard");
-const hangmanImage = document.querySelector(".hangman-box img");
-const gameModal = document.querySelector(".game-modal");
-const playAgainBtn = gameModal.querySelector("button");
-// Initializing game variables
-let currentWord, correctLetters, wrongGuessCount;
-const maxGuesses = 6;
-const resetGame = () => {
-    // Ressetting game variables and UI elements
-    correctLetters = [];
-    wrongGuessCount = 0;
-    hangmanImage.src = "images/hangman-0.svg";
-    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-    wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
-    keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
-    gameModal.classList.remove("show");
-}
-const getRandomWord = () => {
-    // Selecting a random word and hint from the wordList
-    const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    currentWord = word; // Making currentWord as random word
-    document.querySelector(".hint-text b").innerText = hint;
-    resetGame();
-}
-const gameOver = (isVictory) => {
-    // After game complete.. showing modal with relevant details
-    const modalText = isVictory ? `You Saved Great Britain!` : 'The correct word was:';
-    const howToPlayButton = document.querySelector(".how-to-play"); // Select the "How to Play" button
+document.addEventListener('DOMContentLoaded', () => {
+    const wordDisplay = document.querySelector(".word-display");
+    const guessesText = document.querySelector(".guesses-text b");
+    const keyboardDiv = document.querySelector(".keyboard");
+    const hangmanImage = document.querySelector(".hangman-box img");
+    const gameModal = document.querySelector(".game-modal");
+    const playAgainBtn = gameModal.querySelector("button");
+    const countdownEl = document.getElementById('countdown');
 
-    gameModal.querySelector("img").src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
-    gameModal.querySelector("h4").innerText = isVictory ? 'You Saved Great Britain!' : 'The War is Lost!';
-    gameModal.querySelector("p").innerHTML = isVictory ? `<b>${currentWord}</b>` : `${modalText} <b>${currentWord}</b>`;
+    let currentWord, correctLetters, wrongGuessCount, updateCountdownInterval;
+    const maxGuesses = 6;
+    const startingMinutes = 4;
+    let time = startingMinutes * 60;
 
-    // Hide the "How to Play" button when the player wins
-    howToPlayButton.style.display = isVictory ? 'none' : 'block';
-    
-    gameModal.classList.add("show");
-    
-}
-const initGame = (button, clickedLetter) => {
-    // Checking if clickedLetter is exist on the currentWord
-    if(currentWord.includes(clickedLetter)) {
-        // Showing all correct letters on the word display
-        [...currentWord].forEach((letter, index) => {
-            if(letter === clickedLetter) {
-                correctLetters.push(letter);
-                wordDisplay.querySelectorAll("li")[index].innerText = letter;
-                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
-            }
-        });
-    } else {
-        // If clicked letter doesn't exist then update the wrongGuessCount and hangman image
-        wrongGuessCount++;
-        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        countdownEl.textContent = `${minutes}:${seconds}`;
+        if (time <= 0) {
+            clearInterval(updateCountdownInterval);
+            countdownEl.textContent = '0:00';
+            gameOver(false);
+        } else {
+            time--;
+        }
     }
-    button.disabled = true; // Disabling the clicked button so user can't click again
-    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-    // Calling gameOver function if any of these condition meets
-    if(wrongGuessCount === maxGuesses) return gameOver(false);
-    if(correctLetters.length === currentWord.length) return gameOver(true);
-}
-// Creating keyboard buttons and adding event listeners
-for (let i = 97; i <= 122; i++) {
-    const button = document.createElement("button");
-    button.innerText = String.fromCharCode(i);
-    keyboardDiv.appendChild(button);
-    button.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
-}
-getRandomWord();
-playAgainBtn.addEventListener("click", getRandomWord);
 
-// Leaderboard Button Creation and Event
-const createLeaderboardButton = () => {
-    const contentDiv = gameModal.querySelector(".content");
-    let leaderboardButton = contentDiv.querySelector(".view-leaderboards");
-    if (!leaderboardButton) {
-        leaderboardButton = document.createElement("button");
-        leaderboardButton.textContent = "View Leaderboards";
-        leaderboardButton.classList.add("modal-button", "view-leaderboards");
-        contentDiv.appendChild(leaderboardButton);
-    }
-    return leaderboardButton;
-};
-
-const showLeaderboards = () => {
-    // Logic to display the leaderboards goes here
-    console.log('Leaderboard view requested');
-    // You'll replace the console.log with your actual code to show leaderboards
-};
-
-// Add this line inside the resetGame function, right before `gameModal.classList.remove("show");`
-const viewLeaderboardsBtn = createLeaderboardButton();
-
-// And this line right after creating the button inside the resetGame function
-viewLeaderboardsBtn.addEventListener("click", showLeaderboards);
-
-// Call `resetGame` at the end of the script to make sure the button is created when the page loads
-resetGame();
-
-
-
-const startingMinutes = 4;
-let time = startingMinutes * 60;
-
-const countdownEl = document.getElementById('countdown');
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
-
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    countdownEl.textContent = `${minutes}:${seconds}`;
-    if (time <= 0) {
+    const resetGame = () => {
+        correctLetters = [];
+        wrongGuessCount = 0;
+        time = startingMinutes * 60;
         clearInterval(updateCountdownInterval);
-        countdownEl.textContent = '0:00';
-        gameOver(false); // Display game over when the timer reaches zero
-        return;
-    }
-    time--;
+        updateCountdownInterval = setInterval(updateCountdown, 1000);
 
-}
+        hangmanImage.src = "images/hangman-0.svg";
+        guessesText.textContent = `Incorrect guesses: ${wrongGuessCount} / ${maxGuesses}`;
+        gameModal.classList.remove("show");
+
+        getRandomWord();
+        createKeyboardButtons();
+    };
+
+    const getRandomWord = () => {
+        const wordData = wordList[Math.floor(Math.random() * wordList.length)];
+        currentWord = wordData.word.toUpperCase();
+        document.querySelector(".hint-text b").textContent = wordData.hint;
+        wordDisplay.innerHTML = currentWord.split("").map(letter => `<li class="letter">_</li>`).join("");
+    };
+
+    const gameOver = (isVictory) => {
+        clearInterval(updateCountdownInterval);
+        const modalText = isVictory ? 'Congratulations! You won!' : 'Game over. Time\'s up!';
+        gameModal.querySelector("h4").textContent = modalText;
+        gameModal.querySelector("p").textContent = `The correct word was: ${currentWord}`;
+        gameModal.classList.add("show");
+    };
+
+    function initGame(button, clickedLetter) {
+        if (currentWord.includes(clickedLetter)) {
+            [...currentWord].forEach((letter, index) => {
+                if (letter === clickedLetter) {
+                    correctLetters.push(letter);
+                    const letters = wordDisplay.querySelectorAll("li");
+                    letters[index].textContent = letter;
+                }
+            });
+            const isComplete = currentWord.split("").every(letter => correctLetters.includes(letter));
+            if (isComplete) gameOver(true);
+        } else {
+            wrongGuessCount++;
+            hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
+            if (wrongGuessCount >= maxGuesses) gameOver(false);
+        }
+        button.disabled = true;
+        guessesText.textContent = `Incorrect guesses: ${wrongGuessCount} / ${maxGuesses}`;
+    }
+
+    function createKeyboardButtons() {
+        keyboardDiv.innerHTML = ''; // Clear out any existing buttons
+        for (let i = 97; i <= 122; i++) {
+            const letter = String.fromCharCode(i).toUpperCase();
+            const button = document.createElement("button");
+            button.textContent = letter;
+            button.addEventListener("click", (e) => initGame(e.target, letter));
+            keyboardDiv.appendChild(button);
+        }
+    }
+
+    playAgainBtn.addEventListener("click", resetGame);
+    resetGame();
+});
