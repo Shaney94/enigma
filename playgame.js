@@ -51,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameOver = (isVictory) => {
         clearInterval(updateCountdownInterval);
         const modalText = isVictory ? 'Congratulations! You won!' : 'Game over. Time\'s up!';
+        const imageFile = isVictory ? 'victory.gif' : 'lost.gif';
+        const gameOverImage = gameModal.querySelector("img");
+    
+        gameOverImage.src = `./images/${imageFile}`; // Assuming your images folder is in the root directory.
+        gameOverImage.alt = isVictory ? 'Victory image' : 'Defeat image';
+    
         gameModal.querySelector("h4").textContent = modalText;
         gameModal.querySelector("p").textContent = `The correct word was: ${currentWord}`;
         gameModal.classList.add("show");
