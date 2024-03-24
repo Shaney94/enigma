@@ -400,7 +400,28 @@ p {
 
 .how-to-play-button:hover {
     background-color: #d19122;
+    
 }
+.plus-five-animation {
+    color: #4CAF50; /* Adjust color as needed */
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: plusFiveFadeSlide 2s forwards;
+}
+
+@keyframes plusFiveFadeSlide {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+
 
 
 
