@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainBtn = gameModal.querySelector("button");
     const countdownEl = document.getElementById('countdown');
 
+    let roundsCompleted = 0;
     let currentWord, correctLetters, wrongGuessCount, updateCountdownInterval;
     const maxGuesses = 6;
     const startingMinutes = 4;
@@ -66,7 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
         gameModal.querySelector("h4").textContent = modalText;
         gameModal.querySelector("p").textContent = `The correct word was: ${currentWord}`;
+        
+        if (isVictory) {
+            if (roundsCompleted < 2) {
+                // Increment the number of rounds completed
+                roundsCompleted++;
+                // Reset the game to start the next round
+                resetGame();
+                return;
+            }
+        }
+        // Proceed to show the game over modal if less than 3 rounds have been won or if the player lost
         gameModal.classList.add("show");
+gameModal.classList.add("show");
     };
 
     function initGame(button, clickedLetter) {
