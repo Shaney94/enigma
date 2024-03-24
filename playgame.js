@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let roundsCompleted = 0;
     let currentWord, correctLetters = [], wrongGuessCount, updateCountdownInterval;
     const maxGuesses = 6;
-    const startingMinutes = 4;
+    const startingMinutes = 3;
     let time = startingMinutes * 60;
 
     function updateCountdown() {
