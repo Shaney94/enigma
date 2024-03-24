@@ -345,41 +345,62 @@ p {
 
 }
 
-/* Positioning the countdown timer at the bottom right corner */
+/* Positioning the countdown timer at the bottom right corner, resized to 70% */
 .countdown {
-    position: fixed; /* Fixed position relative to the viewport */
-    right: 50px; /* Distance from the right edge of the viewport */
-    top: 50%; /* Centered vertically */
-    transform: translateY(-50%); /* Offset for exact vertical centering */
-    background: #1c162d; /* Background color */
-    border: 1px solid #000066; /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    text-align: center; /* Center text */
-    padding: 10px; /* Padding inside the box */
-    width: 120px; /* Width of the box */
-    z-index: 100; /* Make sure it's on top of other elements */
-  }
-  
-  .timer-icon {
-    width: 60px; /* Width of the clock icon */
-    height: auto; /* Auto height to maintain aspect ratio */
-    display: block; /* Block display to enforce new line */
-    margin: 0 auto 10px; /* Center the icon horizontally */
-  }
-  
-  .time-left {
-    display: block; /* New line */
-    color: white; /* Text color */
-    margin-bottom: 5px; /* Space between "TIME LEFT" and the timer */
-    font-size: 14px; /* Font size */
-  }
-  
-  .timer {
-    color: white; /* Text color */
-    font-size: 22px; /* Larger font size for the timer */
-    font-weight: bold; /* Bold font weight */
-    letter-spacing: 1px; /* Space out the letters a bit */
-  }
-  
+    position: fixed;
+    right: 20px;
+    bottom: 20px; /* Changed from top to bottom to align with the bottom of the viewport */
+    transform: translateX(-50%);
+    background: #1c162d; /* Match the background color with the button */
+    color: white;
+    width: 250px; /* Allow the container to fit its content */
+    padding: 1px;
+    text-align: center;
+    border-radius: 20px 20px 0 0; /* Round the top corners to match the button */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Resizing the clock image */
+.timer-icon {
+    max-width: 70%; /* Resize the image to 70% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.countdown .time-left {
+    font-size: 14px; /* Reduced from 20px */
+    margin-bottom: 5px;
+}
+
+/* Adjust the .timer class if it exists or the ID/Class that contains the time */
+.timer, #countdown {
+    margin-right: 190px;
+    font-size: 2.5rem; /* Reduced from 2.5rem */
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+}
+
+.how-to-play-button {
+    background-color: #4796e1; /* Bootstrap primary button color */
+    color: rgb(46, 43, 43);
+    text-decoration: none;
+    padding: 10px 40px; /* Increased horizontal padding */
+    border-radius: 5px; /* Adjust if needed for desired roundedness */
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 18px;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    min-width: 250px; /* Sets a minimum width for the button */
+}
+
+.how-to-play-button:hover {
+    background-color: #d19122;
+}
+
+
 
