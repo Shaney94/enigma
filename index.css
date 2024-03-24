@@ -123,6 +123,7 @@
     color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 36px;
+  margin-top: -20px;
     cursor: pointer;
     width: 25%;
     height: 0%;
@@ -165,6 +166,7 @@
     width: 25%;
     height: 34%;
     text-align: center;
+    margin-top: ;
     vertical-align: text-bottom;
 }
 
