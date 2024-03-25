@@ -1,54 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures the website scales correctly on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add page title -->
+    <!-- Title of the web page as it appears in the tab -->
     <title>ENIGMA - PLAY GAME</title>
-    <!-- Link CSS  -->
+    <!-- Links the external CSS file for styling the page -->
     <link href="playgame.css" rel="stylesheet">
-    <!-- Link JavaScript  -->
+    <!-- Links to external JavaScript files; 'defer' delays execution until the HTML is fully parsed -->
     <script src="word-list.js" defer></script>
     <script src="playgame.js" defer></script>
-    <!-- Add favicon -->
+    <!-- Specifies the favicon for the webpage -->
     <link rel="icon" type="image/x-icon" href="./images/favicon1.png">
+    <!-- Google Fonts link for incorporating the 'Poppins' font style -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Logo that links back to the homepage -->
   <a href="index.html"><img src="./images/logo.png" class="logo"></a>
+  <!-- Modal for game-over state -->
   <div class="game-modal">
-<div class="mission-failed-banner">MISSION FAILED</div>
-      <div class="content modal-hidden">
-          <img src="#" alt="gif">
-          <h4>THE WAR IS LOST</h4>
-          <p>The correct word was: <b>rainbow</b></p>
-          <!-- Existing content -->
-<button class="modal-button play-again">Play Again</button>
-<!-- New Leaderboards Button -->
-<a href="leaderboard.html" class="modal-button view-leaderboards">View Leaderboards</a>
-<a href="howtoplay.html" class="modal-button how-to-play" id="how-to-play-button">How to Play</a>
-      </div>
+    <!-- Banner displayed when a mission is failed -->
+    <div class="mission-failed-banner">MISSION FAILED</div>
+    <!-- Content of the modal, initially hidden -->
+    <div class="content modal-hidden">
+      <!-- Placeholder for an image (possibly a GIF for game over state) -->
+      <img src="#" alt="gif">
+      <!-- Text displayed when the game is lost -->
+      <h4>THE WAR IS LOST</h4>
+      <!-- Shows the correct word after game over -->
+      <p>The correct word was: <b>rainbow</b></p>
+      <!-- Button to play again, restarting the game -->
+      <button class="modal-button play-again">Play Again</button>
+      <!-- Links to the leaderboard and instructions on how to play -->
+      <a href="leaderboard.html" class="modal-button view-leaderboards">View Leaderboards</a>
+      <a href="howtoplay.html" class="modal-button how-to-play" id="how-to-play-button">How to Play</a>
+    </div>
   </div>
+  <!-- Main game content container -->
   <div class="container">
-      <div class="hangman-box">
-          <img src="#" draggable="false" alt="hangman-img">
-          <h1>CRACK THE ENIGMA CODE</h1>
-      </div>
-      <div class="game-box">
-          <ul class="word-display"></ul>
-          <h4 class="hint-text">Hint: <b></b></h4>
-          <h4 class="guesses-text"> <b></b></h4>
-          <div class="keyboard"></div>
-      </div>
+    <!-- Container for the hangman image and game title -->
+    <div class="hangman-box">
+      <!-- Placeholder for the hangman image -->
+      <img src="#" draggable="false" alt="hangman-img">
+      <!-- Game title -->
+      <h1>CRACK THE ENIGMA CODE</h1>
+    </div>
+    <!-- Game box containing the word to guess and the keyboard -->
+    <div class="game-box">
+      <!-- Displays the word to guess -->
+      <ul class="word-display"></ul>
+      <!-- Displays a hint for the word -->
+      <h4 class="hint-text">Hint: <b></b></h4>
+      <!-- Displays the number of incorrect guesses -->
+      <h4 class="guesses-text"> <b></b></h4>
+      <!-- Container for the on-screen keyboard -->
+      <div class="keyboard"></div>
+    </div>
   </div>
-<!-- Countdown Timer Container -->
-<div class="countdown">
+  <!-- Container for the countdown timer -->
+  <div class="countdown">
+    <!-- Icon for the timer -->
     <img src="./images/clock.jpg" alt="Clock" class="timer-icon">
+    <!-- Label for the time left -->
     <span class="time-left">TIME LEFT</span>
+    <!-- Displays the remaining time -->
     <span id="countdown" class="timer">2:00</span>
+    <!-- Link to instructions on how to play the game -->
     <a href="howtoplay.html" class="how-to-play-button">How to Play</a>
-
-</div>
+  </div>
 </body>
 </html>
