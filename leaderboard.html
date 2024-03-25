@@ -2,102 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add page title -->
-    <title>ENIGMA - ABOUT</title>
-    <!-- Link CSS  -->
-    <link href="leaderboard.css" rel="stylesheet">
-    <!-- Link JavaScript  -->
-    <script defer src="leaderboard.js"></script>
-    <!-- Add favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon1.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>ENIGMA - ABOUT</title> <!-- The title shown in the browser tab -->
+    <link href="leaderboard.css" rel="stylesheet"> <!-- Link to the external CSS file for styling -->
+    <script defer src="leaderboard.js"></script> <!-- Link to the JavaScript file, with 'defer' to ensure it loads after the HTML -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon1.png"> <!-- Website favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fonts link for 'Poppins' font -->
 </head>
 <body>
-    </div>
-    <!-- Create a container element (section) -->
-    <div class="container">
-        <a href="index.html"><img src="./images/logo.png" class="logo"></a><br>
-        <div class="leaderboard-rectangle">LEADERBOARDS</div>
+    <div class="container"> <!-- Main content container -->
+        <a href="index.html"><img src="./images/logo.png" class="logo"></a><br> <!-- Logo that links back to the homepage -->
+        <div class="leaderboard-rectangle">LEADERBOARDS - COMING SOON</div> <!-- Leaderboard section title -->
+        <!-- Each 'leaderboard-entry' div represents a row in the leaderboard -->
         <div class="leaderboard-entry">
-          <!-- Text -->  
-          <div class="ranking-text">1</div>
-          <div class="player-name-text">
-            <p id="rank1_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank1_Time"></p>
-          </div>
+          <div class="ranking-text">1</div> <!-- Rank number -->
+          <div class="player-name-text"><p id="rank1_Name"></p></div> <!-- Player name, filled by JS -->
+          <div class="recorded-time-text"><p id="rank1_Time"></p></div> <!-- Player time, filled by JS -->
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">2</div>
-          <div class="player-name-text">
-            <p id="rank2_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank2_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank2_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank2_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">3</div>
-          <div class="player-name-text">
-            <p id="rank3_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank3_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank3_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank3_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">4</div>
-          <div class="player-name-text">
-            <p id="rank4_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank4_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank4_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank4_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">5</div>
-          <div class="player-name-text">
-            <p id="rank5_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank5_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank5_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank5_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">6</div>
-          <div class="player-name-text">
-            <p id="rank6_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank6_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank6_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank6_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">7</div>
-          <div class="player-name-text">
-            <p id="rank7_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank7_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank7_Name"></p></div>
+          <div class="recorded-time-text"><p id="rank7_Time"></p></div>
         </div>
         <div class="leaderboard-entry">
-          <!-- Text -->  
           <div class="ranking-text">8</div>
-          <div class="player-name-text">
-            <p id="rank8_Name"></p>
-          </div>
-          <div class="recorded-time-text">
-            <p id="rank8_Time"></p>
-          </div>
+          <div class="player-name-text"><p id="rank8_Name"></p></div> <!-- Last player name, filled by JS -->
+          <div class="recorded-time-text"><p id="rank8_Time"></p></div> <!-- Last player time, filled by JS -->
         </div>
     </div>
 </body>

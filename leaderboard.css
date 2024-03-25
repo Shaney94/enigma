@@ -1,90 +1,77 @@
-/* Setup styling */
+/* Global setup: Resets margin and padding for all elements to ensure a consistent layout across browsers. */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures the total width and height of elements include their padding and border. */
+  font-family: "Poppins"; /* Sets a default font for the webpage. */
 }
 
+/* Styles the logo with a fixed width, automatic height adjustment, and makes it clickable. */
 .logo {
-    width: 15%;
-    /* Autosizes the image height, based on given width */
-    height: auto;
-    /* Activates mouse cursor when image is hovered over */
-    cursor: pointer;
-    padding: 10px 50px;
+  width: 15%; /* Sets logo width relative to its container, ensuring responsiveness. */
+  height: auto; /* Keeps the logo's aspect ratio intact. */
+  cursor: pointer; /* Indicates the logo is clickable. */
+  padding: 10px 50px; /* Adds padding around the logo for better spacing. */
 }
 
+/* Styles the main container that likely wraps the webpage content. */
 .container {
-    width: 100%;
-    min-height: 100vh;
-    /* Set background image with overlaying colour gradient (includes opacity) */
-    background-image: linear-gradient(rgb(117 190 218 /40%),rgb(9,0,77,80%)), url(./images/machine.jpg);
-    /*Set size of the background image */
-    background-size: cover;
-    /*Set position of resize background image */
-    background-position: center;
+  width: 100%; /* Container takes the full width of its parent. */
+  min-height: 100vh; /* Ensures the container covers the whole viewport height. */
+  background-image: linear-gradient(rgb(117 190 218 /40%), rgb(9,0,77,80%)), url(./images/machine.jpg); /* Sets a background image with a color gradient overlay. */
+  background-size: cover; /* Ensures the background covers the entire area of the container, without repeating. */
+  background-position: center; /* Centers the background image within the container. */
 }
 
+/* Styles the leaderboard title with a distinct background, border, and text formatting. */
 .leaderboard-rectangle {
-  background: rgb(223, 11, 82);
-  padding: 20px;
-  width: 60%;
-  text-align: center;
-  border: 1px solid rgb(20, 4, 58);
-  /* Round the corners */
-  border-radius: 7px;
-  font-weight: 700;
-  font-size: 32px;
-  margin-left: 20%;
-  color: #ffffff;
-  margin-bottom: 0.5%;
+background: rgb(223, 11, 82); /* Bright pink background for visibility. */
+padding: 20px; /* Adds internal spacing around the text. */
+width: 60%; /* Sets the width relative to its container for responsive design. */
+text-align: center; /* Centers the title text. */
+border: 1px solid rgb(20, 4, 58); /* Adds a border for definition. */
+border-radius: 7px; /* Rounds the corners for a softer look. */
+font-weight: 700; /* Makes the title text bold. */
+font-size: 32px; /* Sets a large font size for prominence. */
+margin-left: 20%; /* Centers the block by pushing it from the left. */
+color: #ffffff; /* White text for contrast against the background. */
+margin-bottom: 0.5%; /* Adds a small margin below for spacing. */
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
+/* Styles individual leaderboard entries, making them interactive and visually distinct. */
 .leaderboard-entry {
-  background-color: #07010ef5;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 30px;
-  width: 60%;
-  text-indent: 2%;
-  border: 1px solid rgb(20, 4, 58);
-  transition: 0.4s;
-  /* Round the corners */
-  border-radius: 7px;
-  font-weight: 300;
-  font-size: 22px;
-  margin-left: 20%;
-  margin-bottom: 0.1%;
+background-color: #07010ef5; /* Dark, semi-transparent background for readability. */
+color: #ffffff; /* White text for contrast. */
+cursor: pointer; /* Indicates the entry is interactive. */
+padding: 30px; /* Adds internal spacing for aeration. */
+width: 60%; /* Width relative to its container for consistent layout. */
+text-indent: 2%; /* Indents the text slightly for visual hierarchy. */
+border: 1px solid rgb(20, 4, 58); /* Defines the boundary of each entry. */
+transition: 0.4s; /* Smooth transition for hover effects. */
+border-radius: 7px; /* Rounds the corners for aesthetic coherence. */
+font-weight: 300; /* Lighter font weight for the entry text. */
+font-size: 22px; /* Sets the font size for readability. */
+margin-left: 20%; /* Aligns entries in the center of the page. */
+margin-bottom: 0.1%; /* Tight spacing between entries. */
 }
 
-.ranking-text {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 5px;
-    background-color: yellow;
-}
-
-.player-name-text {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 5px;
-    background-color: yellow; 
-    text-wrap: nowrap;
-}
-
+/* Styles for the rank, player name, and recorded time texts within leaderboard entries. */
+.ranking-text,
+.player-name-text,
 .recorded-time-text {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 5px;   
-    background-color: yellow;
+  display: inline-block; /* Allows elements to sit side-by-side. */
+  width: auto; /* Width adjusts to content. */
+  height: auto; /* Height adjusts to content. */
+  padding: 5px; /* Adds space around the text for clarity. */
+  background-color: rgb(20, 4, 58); /* Highlights the text for visibility. */
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Specifically for player-name-text to prevent text wrapping. */
+.player-name-text {
+  white-space: nowrap; /* Keeps player names on a single line. */
+}
+
+/* Modifies the background color of an active or hovered leaderboard entry for visual feedback. */
 .active, .leaderboard-entry:hover {
-  background-color: #565658f5;
+background-color: #565658f5; /* Darker background for highlighted state. */
 }

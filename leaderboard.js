@@ -1,3 +1,4 @@
+// Populates the leaderboard with names and times
 document.getElementById("rank1_Name").innerHTML = "Ryan";
 document.getElementById("rank2_Name").innerHTML = "Shane Anderson";
 document.getElementById("rank3_Name").innerHTML = "Susan";
@@ -15,3 +16,4 @@ document.getElementById("rank5_Time").innerHTML = "03:59";
 document.getElementById("rank6_Time").innerHTML = "04:15";
 document.getElementById("rank7_Time").innerHTML = "04:22";
 document.getElementById("rank8_Time").innerHTML = "07:27";
+// Additional times omitted for brevity
