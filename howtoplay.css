@@ -1,122 +1,122 @@
-/* Setup styling */
-*{
+/* Global Reset and Font Styling */
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins";
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  font-family: "Poppins"; /* Sets a global font family for consistency */
 }
 
+/* Logo Styling */
 .logo {
-  width: 15%;
-  /* Autosizes the image height, based on given width */
-  height: auto;
-  /* Activates mouse cursor when image is hovered over */
-  cursor: pointer;
-  padding: 10px 50px;
+  width: 15%; /* Sets the logo width relative to its container */
+  height: auto; /* Ensures the height scales proportionally to the width */
+  cursor: pointer; /* Changes the cursor to indicate the logo is clickable */
+  padding: 10px 50px; /* Adds padding around the logo for spacing */
 }
 
+/* Container Styling */
 .container {
-  width: 100%;
-  min-height: 100vh;
-  /* Set background image with overlaying colour gradient (includes opacity) */
-  background-image: linear-gradient(rgb(117 190 218 /40%),rgb(9,0,77,80%)), url(./images/machine.jpg);
-  /*Set size of the background image */
-  background-size: cover;
-  /*Set position of resize background image */
-  background-position: center;
+  width: 100%; /* Container takes the full width of its parent */
+  min-height: 100vh; /* Minimum height to fill the viewport height */
+  background-image: linear-gradient(rgb(117 190 218 / 40%), rgb(9, 0, 77, 80%)), url(./images/machine.jpg);
+  /* Applies a color gradient on top of a background image for visual depth */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center; /* Centers the background image */
 }
 
+/* Slideshow Container */
 .slideshow-container {
-background: rgb(20, 4, 58);
-width: 60%;
-/* Round the corners */
-border-radius: 7px;
-margin-left: 20%;
-padding: 20px;
-max-width: 60%;
-position: relative;
-margin: auto;
+  background: rgb(20, 4, 58); /* Dark background color for contrast */
+  width: 60%; /* Width relative to its parent */
+  border-radius: 7px; /* Rounded corners for aesthetics */
+  margin-left: 20%; /* Centers the container */
+  padding: 20px; /* Inner spacing */
+  max-width: 60%; /* Maximum width to maintain layout integrity */
+  position: relative; /* Positions the container in a relative layout context */
+  margin: auto; /* Overrides the margin-left for centering in both directions */
 }
 
+/* How-To Section Styling */
 .howto-rectangle {
-background: rgb(223, 11, 82);
-padding: 20px;
-width: 60%;
-text-align: center;
-border: 1px solid rgb(20, 4, 58);
-/* Round the corners */
-border-radius: 7px;
-font-weight: 700;
-font-size: 32px;
-margin-left: 20%;
-color: #ffffff;
+  background: rgb(223, 11, 82); /* Bright background for emphasis */
+  padding: 20px; /* Padding for inner spacing */
+  width: 60%; /* Width relative to its parent */
+  text-align: center; /* Centers the text inside the rectangle */
+  border: 1px solid rgb(20, 4, 58); /* Adds a border for definition */
+  border-radius: 7px; /* Rounded corners */
+  font-weight: 700; /* Bold text for readability */
+  font-size: 32px; /* Larger font size for emphasis */
+  margin-left: 20%; /* Centers the rectangle */
+  color: #ffffff; /* White text for contrast */
 }
 
+/* Instruction Text Styling */
 .instruction-text {
-  text-align: center;
-  color: #ffffff;
-  margin-top: 4%;
-  margin-bottom: 5%;
-  font-size: 42px;
+  text-align: center; /* Centers the text */
+  color: #ffffff; /* White text color for readability */
+  margin-top: 4%; /* Top margin for spacing */
+  margin-bottom: 5%; /* Bottom margin for spacing */
+  font-size: 42px; /* Large font size for clarity */
 }
 
-/* Hide the images by default */
+/* Slideshow Image Styling */
 .mySlides {
-  display: none;
+  display: none; /* Hides the slideshow images by default */
 }
 
-/* Next & previous buttons */
+/* Button Styling for Navigation */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  bottom: 2%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: 700;
-  font-size: 22px;
-  border-radius: 20px;
-  user-select: none;
-  background-color: rgb(223, 11, 82);
+  cursor: pointer; /* Indicates the elements are clickable */
+  position: absolute; /* Positions the buttons absolutely within their relative container */
+  bottom: 2%; /* Positions the buttons at the bottom of the container */
+  width: auto; /* Width is determined by content and padding */
+  padding: 16px; /* Padding for spacing around the text */
+  color: white; /* Text color for readability */
+  font-weight: 700; /* Bold text for emphasis */
+  font-size: 22px; /* Font size for visibility */
+  border-radius: 20px; /* Rounded corners for aesthetics */
+  user-select: none; /* Prevents text selection for better UX */
+  background-color: rgb(223, 11, 82); /* Background color for visibility */
 }
 
-/* Position the "next button" to the right */
+/* Next Button Specific Styling */
 .next {
-  right: 2%;
-  border-radius: 20px;
-  width: 160px;
-  text-align: center;
+  right: 2%; /* Positions the next button to the right */
+  border-radius: 20px; /* Ensures rounded corners */
+  width: 160px; /* Specific width for consistent appearance */
+  text-align: center; /* Centers the button text */
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Hover Effects for Buttons */
 .prev:hover, .next:hover {
-  background-color: rgb(228, 159, 11);
+  background-color: rgb(228, 159, 11); /* Changes background color on hover for visual feedback */
 }
 
-/* The dots/bullets/indicators */
+/* Dot Indicators Styling */
 .dot {
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  margin: 0 2px;
-  border: 4px solid rgb(255, 255, 255);
-  background-color: #bbbbbb00;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  cursor: pointer; /* Indicates the dots are clickable */
+  height: 25px; /* Fixed height */
+  width: 25px; /* Fixed width */
+  margin: 0 2px; /* Spacing between dots */
+  border: 4px solid rgb(255, 255, 255); /* White border for visibility */
+  background-color: #bbbbbb00; /* Transparent background */
+  border-radius: 50%; /* Circular shape */
+  display: inline-block; /* Allows dots to sit in line with each other */
+  transition: background-color 0.6s ease; /* Smooth transition for background color change */
 }
 
+/* Active and Hover State for Dots */
 .active, .dot:hover {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Changes background color to white for active/hover state */
 }
 
-/* Fading animation */
+/* Fade Animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation-name: fade; /* References the keyframes named "fade" */
+  animation-duration: 1.5s; /* Duration of the fade effect */
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: .4} /* Starts with lower opacity */
+  to {opacity: 1} /* Ends with full opacity for the fade-in effect */
 }

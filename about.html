@@ -1,43 +1,53 @@
 <!DOCTYPE html>
+<!-- The DOCTYPE declaration defines this document to be HTML5 -->
 <html lang="en">
+<!-- The html element with lang attribute specifies the language of the page content -->
+
 <head>
+    <!-- The head element contains meta-information about the document -->
     <meta charset="UTF-8">
+    <!-- The charset attribute specifies the character encoding for the HTML document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add page title -->
+    <!-- The viewport element ensures the page is displayed correctly on all devices by controlling the page's dimensions and scaling -->
     <title>ENIGMA - ABOUT</title>
-    <!-- Link CSS  -->
-    <link href="about.css" rel="stylesheet">
-    <!-- Link JavaScript  -->
+    <!-- The title element specifies the title of the document, shown in the browser's title bar or page's tab -->
+    <link rel="stylesheet" href="about.css">
+    <!-- The link element references the external CSS file that styles the page -->
     <script defer src="about.js"></script>
-    <!-- Add favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon1.png">
+    <!-- The script element with defer attribute indicates that the execution of the external JavaScript file is deferred until the HTML document is fully parsed -->
+    <link rel="icon" href="./images/favicon1.png" type="image/x-icon">
+    <!-- The link element here specifies a favicon for the webpage -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- This link imports the 'Poppins' font from Google Fonts -->
 </head>
+
 <body>
-    </div>
-    <!-- Create a container element (section) -->
+    <!-- The body element contains the content of the HTML document -->
     <div class="container">
-        <a href="index.html"><img src="./images/logo.png" class="logo"></a><br>
-        <div class="about-rectangle">ABOUT</div><br><br>
+        <!-- This div serves as a container for the main content of the page, using the class "container" for styling purposes -->
+        <a href="index.html">
+            <!-- This anchor tag provides a link back to the homepage -->
+            <img src="./images/logo.png" alt="Enigma Logo" class="logo">
+            <!-- The img element displays the website's logo, with alt text provided for accessibility -->
+        </a>
+        <div class="about-rectangle">ABOUT</div>
+        <!-- This div displays the "ABOUT" section header, styled distinctively with the class "about-rectangle" -->
         <div class="accordian-container">
+            <!-- This div acts as a container for an accordion component, allowing for collapsible content sections -->
             <button class="accordion">What is Enigma?</button>
+            <!-- A button styled as an accordion toggle for the question "What is Enigma?" -->
             <div class="panel">
-                <p>Welcome to "Enigma," where cryptography meets intrigue! Experience the thrill of decoding encrypted messages<br>
-                using the historic Enigma machine online. Dive into the world of secret communications, unravel mysteries, and<br>
-                test your wits. Are you ready to crack the code and unlock hidden secrets? Let the adventure begin!</p>
+                <!-- This div represents the collapsible content panel associated with the accordion button above -->
+                <p>Welcome to "Enigma," where cryptography meets intrigue! Experience the thrill of decoding encrypted messages using the historic Enigma machine online. Dive into the world of secret communications, unravel mysteries, and test your wits. Are you ready to crack the code and unlock hidden secrets? Let the adventure begin!</p>
             </div>
+            <!-- Repeated structure for additional questions and answers within the accordion component -->
             <button class="accordion">What's the Goal of Enigma?</button>
             <div class="panel">
-                <p>Enigma Game is a thrilling puzzle-solving experience where players race against time to crack complex codes.<br>
-                Tasked with averting a nuclear disaster threatening Britain, participants must decipher encrypted messages<br>
-                within a strict timeframe. Combining strategy, skill, and speed, it's a test of wit and nerve under pressure.</p>
+                <p>Enigma Game is a thrilling puzzle-solving experience where players race against time to crack complex codes. Tasked with averting a nuclear disaster threatening Britain, participants must decipher encrypted messages within a strict timeframe. Combining strategy, skill, and speed, it's a test of wit and nerve under pressure.</p>
             </div>
             <button class="accordion">Why did you Start This?</button>
             <div class="panel">
-                <p>The Enigma Game was initiated as an engaging way to blend historical elements of cryptography with modern-day<br>
-                gaming. It aims to educate on code-breaking's critical role in historical conflicts while providing a suspenseful<br>
-                and entertaining challenge. This game tests players' problem-solving abilities, offering a unique and immersive<br>
-                experience.</p>
+                <p>The Enigma Game was initiated as an engaging way to blend historical elements of cryptography with modern-day gaming. It aims to educate on code-breaking's critical role in historical conflicts while providing a suspenseful and entertaining challenge. This game tests players' problem-solving abilities, offering a unique and immersive experience.</p>
             </div>
         </div>
     </div>

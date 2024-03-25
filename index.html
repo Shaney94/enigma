@@ -1,36 +1,47 @@
 <!DOCTYPE html>
+<!-- The document type declaration for HTML5 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Character encoding for Unicode, supporting international characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add page title -->
+    <!-- Ensures the page is responsive by setting the viewport width and scale -->
     <title>ENIGMA - Home</title>
-    <!-- Link CSS  -->
+    <!-- The title displayed in the browser tab -->
     <link href="index.css" rel="stylesheet">
-    <!-- Link JavaScript  -->
+    <!-- Links to the external CSS file for styles -->
     <script defer src="index.js"></script>
-    <!-- Add favicon -->
+    <!-- Links to the external JavaScript file. 'defer' ensures it loads after the HTML content -->
     <link rel="icon" type="image/x-icon" href="./images/favicon1.png">
+    <!-- Specifies a favicon for the webpage -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Imports the 'Poppins' font from Google Fonts -->
 </head>
 <body>
-    </div>
-    <!-- Create a container element (section) -->
     <div class="container">
-        <a href="index.html"><img src="./images/logo.png" class="logo"></a>
-        <!-- Create button elements -->
+        <!-- Main container for logo and buttons -->
+        <a href="index.html"><img src="./images/logo.png" class="logo" alt="Home"></a>
+        <!-- Logo of the ENIGMA game; clickable and redirects to the homepage -->
+
+        <!-- Buttons for navigation -->
+        <!-- Each button has an onclick event that redirects to the respective page. The alt attribute provides alternative text for accessibility. -->
+
         <button class="about-button" onclick="window.location.href='about.html';">
             <img src="./images/about.png" alt="About"> ABOUT
+        </button>
+        <!-- Button to navigate to the About page -->
+
+        <button class="howto-button" onclick="window.location.href='howtoplay.html';">
+            <img src="./images/howto.png" alt="How to Play"> HOW TO PLAY
+        
+            <button class="leaderboard-button" onclick="window.location.href='leaderboard.html';">
+              <img src="./images/medal.png" alt="Leaderboard"> LEADERBOARD
           </button>
-          <button class="howto-button" onclick="window.location.href='howtoplay.html';">
-            <img src="./images/howto.png" alt="Howtoplay"> HOW TO PLAY
-          </button>
-          <button class="leaderboard-button" onclick="window.location.href='leaderboard.html';">
-            <img src="./images/medal.png" alt="Leaderboard"> LEADERBOARD
-          </button>
+          <!-- Button to navigate to the Leaderboard page -->
+      
           <button class="play-button" onclick="window.location.href='playgame.html';">
-            <img src="./images/playgame.png" alt="Playgame"> PLAY GAME
+              <img src="./images/playgame.png" alt="Play Game"> PLAY GAME
           </button>
-    </div>
-</body>
-</html>
+          <!-- Button to start the game -->
+      </div>
+      
